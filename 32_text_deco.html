@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text_decoration</title>
+</head>
+<body>
+    <h1>Text_decoration 속성</h1> 
+    <p style="text-decoration: none;">none </p>
+    <p style="text-decoration: underline;">underline </p>
+    <p style="text-decoration: overline;">overline</p>
+    <p style="text-decoration: line_through;">line_through </p>
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text_decoration</title>
+    <style>
+        h1 {
+            font-size: 60px;
+        }
+        .shadow1{
+            color: red;
+            text-shadow: 3px 3px black;
+        } 
+        .shadow2{
+            color: rgb(7, 6, 6);
+            text-shadow: 5px 3px 3px rgb(212, 203, 73);
+        }
+        .shadow3{
+            color: rgb(253, 251, 251);
+            text-shadow: 7px -7px 20px rgb(41, 41, 38); /*두께, 상하위치, 퍼짐정도*/
+        }
+        .trans1 {
+            text-transform: capitalize; /* 첫글자만 대문자*/
+        }
+        .trans2 {
+            text-transform: uppercase; /*소문자-->대문자*/
+        }
+        .trans3 {
+            text-transform: lowercase; /*대문자-->소문자*/
+        }
+        p {
+            font-size: 40px;
+        }
+        .spacing1 {
+            letter-spacing: 0.2em;
+        }
+           .spacing2 {
+            letter-spacing: 0.5em;
+        }
+           .spacing3 {
+            letter-spacing: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow1">HTML</h1> 
+    <h1 class="shadow2">CSS </h1>
+    <h1 class="shadow3">Javascript </h1>
+    <br>
+    <p class="trans1">html</p>
+    <p class="trans2">css</p>
+    <p class="trans3">JAVASCIPT</p>
+    <br>
+    <p>CSS</p>
+    <p class="spacing1">CSS</p>
+    <p class="spacing2">CSS</p>
+    <p class="spacing3">CSS</p>
+</body>
+</html>
