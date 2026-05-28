@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display_ attribute</title>
+    <style>
+        /* 사이에 . 이 없으면 부모 -->자식 경로 설명 */
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li{
+            width: 100px;
+
+            /* height와 line-height 수치를 맞추어면 글씨가 박스 정 중앙에 배치됨 */
+            height: 40px;
+            line-height: 40px;
+
+            border: 1px solid black;
+            text-align: center;
+            margin:  10px; 
+
+            /* 블럭을 가로방향으로 정렬 */
+            display: inline-block;
+        }
+
+        /* 하이퍼링크 줄을 없애고 싶을때 */
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li><a href="#">메뉴 4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
