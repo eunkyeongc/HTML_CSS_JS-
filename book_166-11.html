@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 정보</title>
+    <style>
+        #container {
+            width: 500px;
+            height: auto ;
+            border: 1px dotted black;
+            padding-left: 10px;
+        }
+        li {
+            list-style-type: none;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-    <form >
-        <h1>예약 정보</h1>
-        <ul>
-            <li>
-                <label for="r-name">이름</label>
-                <input type="text" id="r-name">                
-            </li>
-            <li>
-                <label for="r-phone">전화</label>
-                <input type="tel" id="r-phone">                
-            </li>
-             <li>
-                <label for="r-mail">메일</label>
-                <input type="email" id="r-mail">                
-            </li>
-            <li>
-                <input type="submit" value="예약하기">
-            </li>
-        </ul>
-    </form>
+    <div id="container">
+        <form >
+            <h1>예약 정보</h1>
+            <ul>
+                <li>
+                    <label for="r-name">이름</label>
+                    <input type="text" id="r-name">                
+                </li>
+                <li>
+                    <label for="r-phone">전화</label>
+                    <input type="tel" id="r-phone">                
+                </li>
+                <li>
+                    <label for="r-mail">메일</label>
+                    <input type="email" id="r-mail">                
+                </li>
+                <li>
+                    <input type="submit" value="예약하기">
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
 </html>
