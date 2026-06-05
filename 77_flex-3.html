@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box layout</title>
+        <style>
+            .container {
+                display: flex;
+                background-color: #eee;
+                border: 1px solid #222;
+                margin-bottom: 30px;
+            }
+            .box {
+                width: 150px;
+                padding: 5px 45px;
+                margin: 5px;
+            
+            }
+            .box:nth-child(odd) {
+                background-color: rgb(255, 187, 0);
+            }
+
+            .box:nth-child(even) {
+                background-color: rgb(0, 255, 64);
+            }
+            p {
+                text-align: center;
+                font-weight: bold;
+            }
+            #opt1 {
+                flex-flow: row wrap; /* 창 크기에 맞추어서 여러줄로 배치 */
+            }
+            #opt2 {
+              flex-flow: row nowrap; /* 항상 한줄 */
+            }
+        </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">flex-flow: row wrap</div>
+    </div>
+    
+    <div class="container" id="opt2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">flex-flow: row nowrap</div>
+    </div>
+</body>
+</html>

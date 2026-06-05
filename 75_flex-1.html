@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box layout</title>
+        <style>
+            .container {
+                width: 700px;
+                display: flex;
+                background-color: #eee;
+                border: 1px solid #222;
+                margin-bottom: 30px;
+            }
+            .box {
+                width: 200px;
+                padding: 5px 30px;
+                margin: 5px;
+            
+            }
+            .box:nth-child(odd) {
+                background-color: rgb(255, 187, 0);
+            }
+
+            .box:nth-child(even) {
+                background-color: rgb(0, 255, 64);
+            }
+            p {
+                text-align: center;
+                font-weight: bold;
+            }
+            #opt1 {
+                flex-direction: row;
+            }
+            #opt2 {
+                flex-direction: row-reverse;
+            }
+            #opt3 {
+                flex-direction: column;
+            }
+            #opt4 {
+                flex-direction: column-reverse;
+            }
+        </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">flex-direction: row</div>
+    </div>
+    
+    <div class="container" id="opt2">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">row-reverse</div>
+    </div>
+    
+    <div class="container" id="opt3">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">flex-direction: column</div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box">가</div>
+        <div class="box">나</div>
+        <div class="box">column-reverse</div>
+    </div>
+</body>
+</html>

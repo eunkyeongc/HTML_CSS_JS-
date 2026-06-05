@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box layout</title>
+        <style>
+            .container {
+                display: flex;
+                background-color: #eee;
+                border: 1px solid #222;
+                margin-bottom: 30px;
+            }
+            .box {
+                width: 120px;
+                padding: 5px 45px;
+                margin: 5px;
+            
+            }
+            .box:nth-child(odd) {
+                background-color: rgb(255, 187, 0);
+            }
+
+            .box:nth-child(even) {
+                background-color: rgb(0, 255, 64);
+            }
+            p {
+                text-align: center;
+                font-weight: bold;
+            }
+            #opt1 {
+               justify-content: flex-start;
+            }
+            #opt2 {
+               justify-content: flex-end;
+            }
+            #opt3 {
+              justify-content: center;
+            }
+            #opt4 {
+               justify-content:space-between ;
+            }
+            #opt5 {
+               justify-content:space-around ;
+            }
+            #opt6 {
+               justify-content:space-evenly ;
+            }
+        </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">flex-start</div>
+    </div>
+    
+    <div class="container" id="opt2">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">flex-end</div>
+    </div>
+    
+    <div class="container" id="opt3">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">center</div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box">가</div>
+        <div class="box">나</div>
+        <div class="box">다</div>
+        <div class="box">space-between</div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">space-around </div>
+    </div>
+    <div class="container" id="opt6">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">space-evenly</div>
+    </div>
+</body>
+</html>

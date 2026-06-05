@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box layout</title>
+        <style>
+            .container {
+                width: 650px;
+                height: 150px;
+                display: flex;
+                align-items: center; /* 세로 가운데 정렬 */
+                background-color: #eee;
+                gap: 10px; /* 자식들 알아서 10px씩 간격조절 */
+            }
+            .box {
+                width: 80px;
+                padding: 10px;
+            }
+
+            .box:nth-child(odd) {
+                background-color: rgb(255, 187, 0);
+            }
+
+            .box:nth-child(even) {
+                background-color: rgb(0, 255, 64);
+            }
+
+            p {
+                text-align: center;
+                font-weight: bold;
+            }
+            
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+</body>
+</html>
