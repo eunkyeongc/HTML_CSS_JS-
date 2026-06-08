@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 박스 레이아웃</title>
+    <style>
+        @media screen and (min-width:2025px) {
+            .container {
+                padding: 1rem;
+                display: flex;
+                flex-wrap: no wrap;
+            }
+        }
+
+        @media screen and (min-width:769px) and (max-width: 1024px) {
+            #container {
+                padding: 1rem;
+                display: flex;   /*자식 요소들을 가로로 배치*/
+                flex-wrap: wrap; /*공간이 부족하면 다음 줄로 내려감*/
+            }
+        }
+        @media screen and (max-width: 768px) {
+            #container {
+                padding: 1rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; 
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images\kitten-1.jpg" alt="고양이">
+        <img src="images\kitten-2.jpg" alt="고양이">
+        <img src="images\kitten-3.jpg" alt="고양이">        
+    </div>
+</body>
+</html>
