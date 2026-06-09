@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid layout</title>
+    <style>
+        .gallery {
+            width: 700px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-areas: 
+            "photo1 photo1 photo2"
+            "photo1 photo1 photo3"
+            "photo4 photo5 photo6";
+            gap: 5px;
+        }
+        .gallery img  {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .photo1 {
+            grid-area: photo1;
+        }
+        .photo2 {
+            grid-area: photo2;
+        }
+        .photo3 {
+            grid-area: photo3;
+        }
+        .photo4 {
+            grid-area: photo4;
+        }
+        .photo5 {
+            grid-area: photo5;
+        }        
+        .photo6 {
+            grid-area: photo6;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="images/photo-1.jpg" alt="커피"  class="photo1">
+        <img src="images/photo-2.jpg" alt="펭귄"  class="photo2">
+        <img src="images/photo-3.jpg" alt="이글루"  class="photo3">
+        <img src="images/photo-4.jpg" alt="오로라"  class="photo4">
+        <img src="images/photo-5.jpg" alt="장갑"  class="photo5">
+        <img src="images/photo-6.jpg" alt="홍조"  class="photo6">
+    </div>  
+</body>
+</html>
