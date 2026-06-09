@@ -4,38 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>플렉스 박스 레이아웃</title>
-    <style>
-        @media screen and (min-width:2025px) {
-            .container {
-                padding: 1rem;
-                display: flex;
-                flex-wrap: no wrap;
-            }
+    <style>    
+        .container {            
+            display: flex;  /*자식 요소들을 가로로 배치*/
+            flex-wrap: wrap;    /*공간이 부족하면 다음 줄로 내려감*/
+            justify-content: space-around;
+            gap: 10px;
+        }
+    
+        .pic {
+            flex-basis: 32%;
         }
 
-        @media screen and (min-width:769px) and (max-width: 1024px) {
-            #container {
-                padding: 1rem;
-                display: flex;   /*자식 요소들을 가로로 배치*/
-                flex-wrap: wrap; /*공간이 부족하면 다음 줄로 내려감*/
-            }
+        .pic img { 
+            width: 100%; /*pic 박스 사이즈에 맞추어서 사진이 커짐*/            
+            height: auto;
+
+        }
+        @media screen and (min-width:769px) and (max-width: 1024px) {            
+            .pic {
+                flex-basis: 40%;
+            }            
         }
         @media screen and (max-width: 768px) {
-            #container {
-                padding: 1rem;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center; 
-                text-align: center;
+            .pic {
+                flex-basis: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="images\kitten-1.jpg" alt="고양이">
-        <img src="images\kitten-2.jpg" alt="고양이">
-        <img src="images\kitten-3.jpg" alt="고양이">        
+        <div class="pic">
+            <img src="images\kitten-1.jpg" alt="고양이">
+        </div>
+        <div class="pic">
+            <img src="images\kitten-2.jpg" alt="고양이">
+        </div>
+        <div class="pic">
+             <img src="images\kitten-3.jpg" alt="고양이">
+        </div>               
     </div>
 </body>
 </html>
