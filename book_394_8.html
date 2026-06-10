@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS grid layout</title>
     <style>
+        body {
+            display: flex;  /* 자식 요소들을 유연하게 배치할 수 있게 해줌 */
+            justify-content: center;    /* 좌우 중앙 정렬 */
+            align-items: center;    /* 상하 중앙 정렬 */
+            height: 100vh;  /* 브라우저 화면 높이의 100% */
+            margin: 0;
+        }
         .container {   
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;   
             width: 600px;
             height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px; 
         }
         .container > div {
             border: 1px solid #222;
             text-align: center;
         }
         .items:nth-child(odd) {
-            background-color: rgb(242, 178, 248);
+            background-color: rgb(236, 161, 186);
         }
         .items:nth-child(even) {
-            background-color: rgb(135, 65, 141);
+            background-color: rgb(209, 82, 141);
         }
     </style>
 </head>
