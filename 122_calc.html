@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 함수 - var()</title>
+    
+    <style>
+        :root {         /* 함수 정의 */
+            --main-bg-color: #222;
+            --main-text-color: #fff;            
+        }
+        body {          /* 함수 적용 */
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+        }
+        .heading {
+            width: calc(100% - 80px);  /*창의 크기를 조절할때 마다 가로 길이가 달라짐*/
+            margin: auto;
+            background-color: blue;
+            color: yellow;   /*루트의 글자색보다 우선적으로 적용*/
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px #000;
+        }
+    </style>
+
+<body>
+    <div class="heading">
+        <h1>CSS 함수</h1>
+    </div>
+</body>
+</html>

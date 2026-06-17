@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .icon { /*종의 크기 설정*/
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .icon i::after {  /* 종 옆에 숫자 꾸미기*/
+            content: "4";
+            font-size: 15px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            position: absolute;
+            top: 5%;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">
+        <i class="fa-solid fa-bell fa-5x"></i>   <! font-awesome에서 아이콘 코드 복사해오기, fa-5x는 크기를 10배로 !>
+    </div>
+</body>
+</html>

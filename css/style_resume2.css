@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 14px;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .resume {
+        padding: 0;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스</title>
+    <style>
+        body {
+            background-color: #222;            
+        }
+
+        nav {
+            width: 600px;
+            height: 60px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a { 
+            font-size: 15px;
+            font-weight: 700;  /* 글자 굵기 */
+            color: #fff;
+            text-transform: uppercase; /* 대분자로 변환 */
+            text-decoration: none;
+            padding: 0.4rem 0;
+            transition: 0.3s;  /* 에니메이션 효과 커서가 위치하면 색이 천천히 바뀜 */
+        }
+
+        nav a:hover {  /*커서가 위치한 곳에는 주황색으로 반영 */
+            color: #ff7a18;
+        }
+
+        nav:has(a:hover) a:not(:hover){  /*hover가 있다면 hover가 아닌것에 효과주기 */
+            opacity: 0.3; /*커서가 위치 하지 않은 곳에는 회색으로 반영 */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">portfolio</a>
+        <a href="#">contact</a>
+    </nav>
+</body>
+</html>
