@@ -1,0 +1,201 @@
+* {
+    /* 웹브라우져마다 기본 설정이 달라 기본으로 넣어줌. */
+    padding: 0;  
+    margin: 0;
+    box-sizing: border-box;    /* 박스의 테두리를 넣어줌. */
+}
+
+body {
+    background-color: #f5f5f5;   /* 배경색-선호 */
+    color: #333;    /* 글자색 - 선호, 검정은 촌스러워*/
+    font-family: Arial, Helvetica, sans-serif;   /* 글자모양 */
+}
+
+a {
+    color: rgb(235, 162, 73);      /* 하이퍼링크 파란색 촌스러워 변경 */
+    text-decoration: none; /* 하이퍼링크 밑줄 없애기 */
+}
+
+/* 헤더 */
+header {
+    background-color: #1a6fd4; /* 해더 상자 색 */
+    color: #fff;    /* 해더 상자 글자색 */
+    padding:  24px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.7;/* 투명도-약간 흐려짐  */
+}
+
+/* 메인 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+/* 섹션 - 통계카드, 데이터 시각화, 등급기준 */
+section {
+    margin-bottom: 32px;
+}
+
+section h2 {
+    font-size: 1.3rem;
+    font-weight: 700; /*글자 굵기 bold를 수치로 조절 */
+    border-left: 5px solid #1a6fd4; /* 글자 앞 장식,박스 왼쪽 선만 보여주도록 설정. 컬러는 같은 계통의 색으로 사용하는 것을 추천 */
+    padding-left: 15px;
+    margin-bottom: 14px;
+}
+
+/* 핵심 통계 카드 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.stat-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a6fd4;
+    margin-bottom: 6px;
+}
+
+.stat-unit {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* 차트 */
+.charts-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+    
+.chart-card {
+    flex:1;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.chart-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px; 
+    color: #333;   
+}
+
+.chart-desc {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* 등급 기준 */
+.grade-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grade-card {
+    flex: 1;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.7; /* 줄간격 */
+    border-radius: 8px;
+}
+
+.grade-best {
+    background-color: #bad8f2;
+    color: #2c2f69;
+}
+.grade-normal {
+    background-color: #b4efde;
+    color: #00875a;
+}
+.grade-bad {
+    background-color: #f1efcb;
+    color: #606e3b;
+}
+.grade-worst {
+    background-color: #efcbea;
+    color: #e97ee7;
+}
+
+/* 풋터 */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 미디어 쿼리(반응형 웹 디자인) - 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header hi {
+        font-size: 1.4rem;        
+    }
+
+    main {
+        padding: 20px 16px;
+    }
+}
+
+
+/* 미디어 쿼리(반응형 웹 디자인) - 스마트폰 (767px 이하) */
+@media (max-width: 767px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-wrap {
+        flex-direction: column;
+    }
+    header hi {
+        font-size: 1.2rem;        
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+    .stat-value {
+        font-size: 1.6rem;
+    }
+    .grade-card  {
+        flex: 1 1 cale(50%-5px);
+    }
+}
