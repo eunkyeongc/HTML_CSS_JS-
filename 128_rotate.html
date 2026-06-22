@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수를 사용해서 2차원에서 회전하기</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        #container {
+            width: 800px;
+            margin: 20px auto;            
+        }
+        .origin {
+            float: left;
+            margin: 40px;
+            border: 1px solid #ccc;
+            transition: 1s;  /* 움직이는 속도 */
+        }
+
+        #rotate1:hover {
+            transform: rotate(40deg);
+        }
+        #rotate2:hover {
+            transform: rotate(-40deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="origin" id="rotate1">
+             <img src="images/home.png" alt="집">
+        </div> 
+
+        <div class="origin" id="rotate2">
+             <img src="images/home.png" alt="집">
+        </div>       
+    </div>
+</body>
+</html>

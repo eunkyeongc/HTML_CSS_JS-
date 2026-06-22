@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+    }
+    table {
+      width: 200px;
+      height: 50px;
+      border-collapse: collapse;   /* 겹쳐지는 테두리를 하나로 합쳐서 표시 */
+    }
+
+    table, td {
+      border: 1px solid black;
+      padding:10px;
+    }
+
+    caption {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    tr:nth-child(odd) {background-color: #9b9696;}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table>
+      <caption>웹 개발</caption>
+      <tr><td>HTML</td></tr>
+      <tr><td>CSS</td></tr>
+      <tr><td>Javascript</td></tr>
+      <tr><td>Node.js</td></tr>
+      <tr><td>Typescript</td></tr>
+    </table>
+  </div>  
+</body>
+</html>

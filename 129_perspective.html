@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 회전하며 원근감 주기</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        #container {
+            width: 800px;
+            margin: 20px auto;            
+        }
+        .origin {
+            float: left;
+            margin: 40px;
+            border: 1px solid #ccc;
+        }
+
+        .rotatex:hover {
+            transform: rotateX(50deg);
+        }
+
+        #pers {
+            perspective: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="origin">
+            <div class="rotatex"><img src="images/home.png" alt="집"></div>            
+        </div> 
+
+        <div class="origin" id="pers">
+            <div class="rotatex"><img src="images/home.png" alt="집"></div>  
+        </div>       
+    </div>
+</body>
+</html>
