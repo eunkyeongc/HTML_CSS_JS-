@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼에 동적인 효과 만들기</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #e92a2d, #efc0a9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            text-decoration: none; /* 하이퍼링크 밑줄 없애기 */
+            font-size: 1.5rem;
+            letter-spacing: 2px; /* 자간 */
+            color: white;
+            outline: 2px solid #fff;
+            padding: 20px 60px;
+            position: relative;
+            overflow: hidden;
+            transition: color 1s;
+        }
+
+        .button::before {       /* 가상 배경 생성 */
+            content: "";
+            position: absolute; /* 부모로 부터 절대적 위치*/
+            top: 0;
+            left: -50px;
+            width: 0;
+            height: 100%;
+            background-color: white;
+            z-index: -10;
+            transform: skewX(35deg);
+            transition: width 1s;
+        }
+
+        .button:hover {
+            color: #ff5e62;            
+        }
+        
+        .button:hover::before {
+            width: 150%;
+
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">둘러보기</a>
+</body>
+</html>

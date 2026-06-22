@@ -1,0 +1,53 @@
+#container {
+    max-width: 1000px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.prod-list {
+    list-style: none;
+    padding: 0;
+    display: flex;  /*그림  가로로 배치*/
+    flex-wrap: wrap; /* 그림이 너무 많은 경우 자동으로 다음줄로 넘어감 */
+    justify-content: space-around;  /*그림 사이의 간격이 발생 */
+}
+
+.prod-list li {
+    padding: 0;
+    margin: 10px;
+    flex-basis: calc(33.333% - 20px);
+    overflow: hidden;
+    position: relative;
+}
+
+.prod-list img {
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+.prod-list .caption {
+    position: absolute;
+    top: 200px;  /* 위세서 200px 띄우기 */
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    background: reba(0,0,0,0.6);
+    opacity: 0;
+    transition:  all 0.6s ease-in-out;
+    z-index: 10;
+}
+
+.prod-list li:hover .caption{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+
+.prod-list .caption h2, .prod-list .caption p {
+    color: #fff;
+    text-align: center;
+}
