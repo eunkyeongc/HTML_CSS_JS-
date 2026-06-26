@@ -56,6 +56,7 @@ nav button {
     outline: 0;
     border-radius: 5px;
     background-color: #db0001;
+    border: 1px solid #fff;
     color: #fff;
     padding: 10px 24px;
     margin-left: 10px;
@@ -66,7 +67,7 @@ nav button {
 .lang { 
     display: inline-flex;  /* 지구본 한국어 역삼각형을 가로정렬하기 위해서 */
     align-items: center;
-    border: 1px solid #fff;
+    
     background-color: transparent;  /*배경색 투명*/
 }
 
@@ -90,7 +91,7 @@ nav button {
 .header-content h2 {
     font-size: 60px;
     line-height:  1.4;
-    font-weight: 600;
+    font-weight: 700;
     max-width: 650px;
     margin-bottom: 20px;
 }
